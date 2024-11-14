@@ -1,0 +1,22 @@
+<div>
+  <div>
+    <p class="h3">{{ book.title }}</p>
+  </div>
+  <div>
+    <p class="text-secondary">{{ book.subject }}</p>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <div class="pt-2">
+      <div class="d-flex" [class.text-secondary]="!book.publishDate">
+        <p class="ms-2">{{book.publishDate || "Today"}}</p>
+      </div>
+      <div class="d-flex" [class.text-secondary]="!book.language">
+        <p class="ms-2">{{book.language || "English"}}</p>
+      </div>
+      <div class="d-flex" [class.text-secondary]="!book.pages">
+        <p class="ms-2">{{book.pages || "0"}}</p>
+      </div>
+    </div>
+  </div>
+</div>
